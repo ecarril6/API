@@ -4,6 +4,7 @@
 ## Instructions to run local server:
 
 Install required python packages:
+
 ```
 cd API
 pip install -r requirements.txt

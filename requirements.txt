@@ -1,8 +1,13 @@
 django-filter==22.1
 djangorestframework==3.14.0
+docopt==0.6.2
+keras==2.11.0
 markdown==3.4.1
-matplotlib==1.16.0
+matplotlib==3.6.3
 numpy==1.24.2
 opencv-python==4.7.0.68
+pdf2image==1.16.2 # Remove
+pillow==9.4.0
+pytesseract==0.3.10
 virtualenv==20.17.1
 tensorflow==2.11.0

@@ -29,6 +29,13 @@ def imageProcessing():
 
 imageProcessing()
 
+def imageContours():
+    """ Do image processing/convert image and save in new file """
+    img = cv2.imread("API/config/api/backend/originalImages/test.png", 0)
+    edges = cv2.Canny(img, 100, 200)
+    cv2.imwrite("API/config/api/backend/contourImages/test.jpg", edges)
+
+imageContours()
 
 #def invertImage(image_name):
 #    ImageOps.invert(image_name)

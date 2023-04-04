@@ -7,6 +7,5 @@ from django.conf import settings
 urlpatterns=[
     re_path(r'^pre-processed-images$', views.preProcessImageAPI),
     re_path(r'^pre-processed-images/([0-9]+)$', views.preProcessImageAPI),
-
-    re_path(r"^pre-processed-images/savefile", views.SaveFile)
+    # re_path(r"^pre-processed-images/savefile", views.SaveFile)
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

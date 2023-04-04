@@ -6,8 +6,3 @@ class preProcessedImagesSerializer(serializers.ModelSerializer):
         model = preProcessedImages
         fields = ('__all__')
 
-
-class newTableSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = newTable
-        fields = ('__all__')

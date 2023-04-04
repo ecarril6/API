@@ -1,13 +1,11 @@
 from django.http import HttpResponse, JsonResponse
 from rest_framework.response import Response
-from rest_framework import viewsets, filters, generics
-from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
+from rest_framework.parsers import MultiPartParser
 from rest_framework.views import APIView
-
-from api.models import preProcessedImages, newTable
-from api.serializers import preProcessedImagesSerializer, newTableSerializer
+from api.models import preProcessedImages
+from api.serializers import preProcessedImagesSerializer
 
 from django.core.files.storage import default_storage
 
@@ -41,16 +39,13 @@ def preProcessImageAPI(request, id=0):
         image.delete()
         return JsonResponse("Successfully Deleted Image", safe=False)
 
-@csrf_exempt
-def SaveFile(request):
-    file = request.FILES['file']
-    file_name = default_storage.save(file.name, file)
-    return JsonResponse(file_name, safe=False)
 
+class ImageUploadView(APIView):
+    """ API to recieve images from UI and conduct machine learning tasks """
+    parser_classes = [MultiPartParser]
 
-class newTableView(viewsets.ModelViewSet):
-    queryset = newTable.objects.all()
-    serializer_class = newTableSerializer
-
-    filter_backends = (filters.SearchFilter, filters.OrderingFilter)
-    search_fields = ['=image_type']
+    def post(self, request, format = None):
+        file_obj = request.data['file']
+        print("FILE: ", file_obj)
+        # DO MACHINE LEARNING TASKS HERE
+        return Response({'status': 'success'})

@@ -20,11 +20,11 @@ from api import views
 from rest_framework import routers
 
 router = routers.SimpleRouter()
-router.register('new-table', views.newTableView, basename='new-table')
 
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('main-page/', views.mainpage, name='main-page'),
+    path('upload-image/', views.ImageUploadView.as_view(), name='image-upload'),
     re_path(r'^', include('api.urls'))
 ]

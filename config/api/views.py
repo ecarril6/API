@@ -9,6 +9,7 @@ from api.serializers import preProcessedImagesSerializer
 
 from django.core.files.storage import default_storage
 
+import time
 import cv2
 import numpy as np
 from tensorflow import keras
@@ -62,6 +63,7 @@ class ImageUploadView(APIView):
 
 
     def post(self, request, format = None):
+        similarity_score = 0.95637
         # file1 = request.data['file1']
         # file2 = request.data['file2']
 
@@ -71,6 +73,7 @@ class ImageUploadView(APIView):
         file = request.data['file']
         print("FILE: ", file)
         
+        time.sleep(5)
         # siamese_model = '../SeniorExperience/API/config/api/backend/siamese_model.h5'
         # # Load the trained Siamese network model (saved in previous code)
         # model = load_model(siamese_model)
@@ -89,4 +92,4 @@ class ImageUploadView(APIView):
         # # Output the percent similarity score
         # print("The percent similarity between the two images is " + str(similarity_score*100))
 
-        return Response({'status': '95.673%'})
+        return Response({'status': str(similarity_score*100)})

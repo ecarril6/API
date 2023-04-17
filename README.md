@@ -2,8 +2,11 @@
 (( Handwriting Recognition and Handwriting Sample Comparison ))
 
 Google Colab Notebook Links: 
+
 Jada Sachetti- 
+
 Image Cropping https://colab.research.google.com/drive/19pK4YeHhuI_DLjxxy74lYXk4KzhUBr9X?usp=sharing
+
 Feature Extraction and Model implementation https://colab.research.google.com/drive/1FYU0FcZU6zAjOhbmENlXJb4Oyi0Mp3J6#scrollTo=f5PhhAtigNbU
 
 ## Instructions to run local server:

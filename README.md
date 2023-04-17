@@ -9,6 +9,8 @@ Image Cropping https://colab.research.google.com/drive/19pK4YeHhuI_DLjxxy74lYXk4
 
 Feature Extraction and Model implementation https://colab.research.google.com/drive/1FYU0FcZU6zAjOhbmENlXJb4Oyi0Mp3J6#scrollTo=f5PhhAtigNbU
 
+Image Comparison (post Siamese model training) https://colab.research.google.com/drive/1trMhaqYBv0JYmTX6iFH-xqS3goO4MYb0?usp=sharing
+
 ## Instructions to run local server:
 
 Install required python packages:
